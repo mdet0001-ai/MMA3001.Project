@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-8.4.2, pluggy-1.7.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /content/MMA3001_repo
+plugins: anyio-4.15.1, langsmith-0.14.11, platformdirs-4.13.4, typeguard-4.6.0
+collecting ... collected 3 items
+
+tests/test_project_utils.py::test_remove_duplicate_measurements PASSED   [ 33%]
+tests/test_project_utils.py::test_evaluate_regression_perfect_prediction PASSED [ 66%]
+tests/test_project_utils.py::test_chronological_split PASSED             [100%]
+
+============================== 3 passed in 1.34s ===============================
+
