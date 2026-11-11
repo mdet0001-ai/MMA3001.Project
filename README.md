@@ -28,6 +28,20 @@ The regression models use:
 
 - CO₂ concentration in ppm
 
+## Inputs and Output
+
+The model uses five environmental measurements as inputs to predict indoor carbon dioxide concentration.
+
+| Variable | Role | Data type | Unit | Meaning / handling |
+|---|---|---|---|---|
+| Temperature | Input | Numeric | °C | Indoor air temperature. Rows with missing values are excluded before modelling. |
+| Humidity | Input | Numeric | % | Relative humidity. Rows with missing values are excluded before modelling. |
+| Pressure | Input | Numeric | Sensor dataset unit | Atmospheric pressure measurement. Missing values are excluded. |
+| VOC | Input | Numeric | Sensor dataset unit | Volatile organic compound measurement. High values were retained unless there was evidence that they were invalid. |
+| PM2.5 | Input | Numeric | Sensor dataset unit | Fine particulate matter measurement. Missing values are excluded before modelling. |
+| CO2 | Output | Numeric | ppm | Carbon dioxide concentration predicted by the regression models. |
+
+The final modelling dataset contains 13,800 observations from sensor `6012002000869`. Formaldehyde was excluded because approximately 68% of its values were missing. 
 ## Dataset
 
 Environmental sensor data are located in:
